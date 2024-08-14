@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+	/* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+	font-family:
+    'Inter',
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+	line-height: 1.15; /* 1. Correct the line height in all browsers. */
+	-webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+	tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+  border-bottom: 2px solid rgba(220, 220, 220, 0.8);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+}
+
+.site-title {
+    font-size: 2rem;
+    margin: 0;
+    padding: 1.6rem 0.5rem;
+}
+
+.bookshelf-title {
+  padding: 1rem 0 1rem 4.8rem;
+  font-size: 1.4rem;
+}
+
+.books {
+    padding: 0rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+}
+
+.fa-check, .fa-xmark {
+  padding-left: 5px;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    padding: 10px;
+    border-left: 10px solid lightblue;
+}
+
+.notbold {
+    font-weight: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.fa-check {
+    color: lightgreen;
+}
+
+.fa-xmark {
+    color: lightcoral;
+}
+
+#add-book {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border-style: none;
+  background-color: lightblue;
+  color: white;
+  font-size: 20px;
+  padding: 40px;
+  justify-self: center;
+  align-self: center;
+  margin: 100px;
+}
+
+#myForm h1, #myForm label, #myForm p, #myForm button, #myForm input {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#myForm h1 {
+  font-size: 1.8rem;
+  margin-top: 0.2rem;
+}
+
+#myForm label {
+  font-size: 1rem;
+}
+
+#myForm input, #myForm button {
+  border-radius: 5px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 2rem;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 22rem;
+  padding: 1rem;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.05);
+}
+
+/* Full-width input fields */
+.form-container input[type="text"], .form-container input[type="number"] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.remove {
+  color: darkgray;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: darkgray; 
+}
